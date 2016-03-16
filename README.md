@@ -28,7 +28,9 @@
   
   Voorbeeld: 
   
-  <img class="support" src="sstatic/images/header-small.jpg" srcset="sstatic/images/header-small.jpg 480w, sstatic/images/header-medium.jpg 960w, sstatic/images/header-large.jpg 1920w" alt="House of Cards">
+  <code>
+    <img class="support" src="sstatic/images/header-small.jpg" srcset="sstatic/images/header-small.jpg 480w, sstatic/images/header-medium.jpg 960w, sstatic/images/header-large.jpg 1920w" alt="House of Cards">
+  </code>
 </p> 
 
 
