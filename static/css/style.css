@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: 'Lato', 'Helvetica', 'Arial';
+}
+
+main {
+    margin: 1em;
+}
+
+h1 {
+    color: white;
+    font-size: 2.2em;
+}
+
+h2 {
+    
+}
+
+header {
+    width: 100%;
+    height: 50vh;
+    max-height: 60vw;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.overlay {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.support {
+    width: 50%;
+}
+
+.view {
+    width: 700px;
+    width: 50vw;
+}
+
+span[dir] {
+    display: inline-block; 
+    -webkit-transform: scale(-1, 1);  
+    transform: scale(-1, 1); 
+    unicode-bidi: bidi-override;
+}
+/*------------------FALLBACK------------------*/
+
+.meter-gauge {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: whiteSmoke;
+    box-shadow: 0 5px 5px -5px #333 inset;
+    width: 550px;
+    height: 25px;
+    display: block;
+}
+
+.meter-gauge > span {
+  height: inherit;  
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-color: blue;
+  background-image: -webkit-linear-gradient(
+    left, 
+    #8bcf69 5%, 
+    #e6d450 5%,
+    #e6d450 15%,
+    #f28f68 15%,
+    #f28f68 55%,
+    #cf82bf 55%,
+    #cf82bf 95%,
+    #719fd1 95%,
+    #719fd1 100%
+  );
+  background-image: linear-gradient(
+    90deg, 
+    #8bcf69 5%, 
+    #e6d450 5%,
+    #e6d450 15%,
+    #f28f68 15%,
+    #f28f68 55%,
+    #cf82bf 55%,
+    #cf82bf 95%,
+    #719fd1 95%,
+    #719fd1 100%
+  );
+  background-size: 100% 100%;
+  display: block;
+  text-indent: -9999px;
+}
+
+.fuckOff {
+    display: none;
+}
