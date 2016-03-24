@@ -129,8 +129,17 @@ Bij het opzetten van de HTML heb ik nagedacht over de structuur en hoe deze ook 
                         <a href="sounds/hard-kick.mp3">Download hard kick</a>
                     </audio>
                 </section>
+            </div>
   </main>
 ```
+
+In de code is al een soort van fallback te zien. Binnen de audio tag leeft een <a> tag. Mocht de audio tag niet ondersteund worden (zoals in IE 8) dan krijgt de gebruiker als nog een link te zien. Zodra er op deze link geklikt wordt kan het geluidje via een externe player afgespeeld worden. Dit heb ik gestest in IE 8. Windows media player wordt dan geopent en speelt het geluidje af. 
+
+Wordt de audio tag wel ondersteund dan krijgt de gebruiker de standaard controls te zien en kan hij/zij deze afspelen. Doordat er in de audio tag het attribuut loop wordt meegegeven zal het geluidje zich herhaald afspelen. Zo is de gebruiker instaat om een eigen beat te maken met de beschikbare geluiden. 
+
+##Enhancement met JS
+
+
 
 
 
