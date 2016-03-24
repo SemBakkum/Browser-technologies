@@ -3,9 +3,14 @@ body {
     margin: 16px;
 }
 
-.enhanced-with-js h2{
+.enhanced-with-js h2 {
     display: none;
 }
+
+.enhanced-with-js a {
+    display: none;
+}
+
 
 .enhanced-with-js button {
     width: 100px;
@@ -19,8 +24,10 @@ body {
 }
 
 .enhanced-with-js div{
-    width: 500px;
+    width: 300px;
+    overflow: auto;
     background: #050928;
+    text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -31,4 +38,8 @@ body {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+}
+
+.enhanced-with-js section{
+    display: inline-block;
 }
