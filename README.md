@@ -84,5 +84,57 @@
   cache kunnen opslaan.
 </p>
 
+#BT eindopdracht beatbox
+
+##Onderzoek
+
+Uit de cases die beschikbaar waren voor de eindopdracht heb ik gekozen voor de beatbox.
+Voor deze case ben ik aller eerst de audio tag gaan onderzoeken. Het blijkt dat deze in bijna alle browsers (behalve IE 8 & Opera Mini 8) wordt ondersteund, maar wat zijn de mogelijkheden van de audio tag?
+
+###Browser support
+
+De audio tag heeft meerdere attributen die er toepasbaar op zijn, zoals: 
+
+src — Address of the resource
+crossorigin — How the element handles crossorigin requests
+preload — Hints how much buffering the media resource will likely need
+autoplay — Hint that the media resource can be started automatically when the page is loaded
+mediagroup — Groups media elements together with an implicit MediaController
+loop — Whether to loop the media resource
+muted — Whether to mute the media resource by default
+controls — Show user agent controls
+
+Deze attributen kunnen elk ook hun eigen keywords hebben. Het preload attribuut kan bijvoorbeeld 'none' en 'auto' als keyword hebben. None houdt in dat de src van de audio tag niet gepreload hoeft te worden. Auto geeft aan dat de src gepreload kan worden, mits de browser dit ondersteund. Alle browsers ondersteunen daarnaast ook niet elk audio format. Als voorbeeld wordt de audio extensie .wav door zo goed als alle IE browsers niet ondersteund. MP3 daarin tegen weer wel. 
+
+Met dit in het achterhoofd ben ik audio samples gaan uitzoeken voor mijn beatbox en deze gaan converten naar mp3. 
+
+####Can I use audio tag support
+[Can I use audio](http://caniuse.com/#feat=audio "Audio")
+
+####Can I use mp3 support
+[Can I use mp3](http://caniuse.com/#feat=mp3 "MP3")
+
+##HTML
+
+Bij het opzetten van de HTML heb ik nagedacht over de structuur en hoe deze ook met de tab nog steeds goed te gebruiken is. 
+
+```
+ <main>
+            
+            <h1>Vunzige deuntjes</h1>
+            <div>
+                <section>
+                    <h2>Hard kick</h2>
+                    <audio id="hardKick" src="sounds/hard-kick.mp3" preload="auto" controls loop>
+                        <a href="sounds/hard-kick.mp3">Download hard kick</a>
+                    </audio>
+                </section>
+  </main>
+```
+
+
+
+
+
 
   
