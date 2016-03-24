@@ -2,171 +2,23 @@
 <html lang="nl">
     
     <head>
-      
+      <title>Eindopdracht Beatbox</title>
         <meta charset="utf-8">
-        <title>Opdracht 2.1</title>
-        <link rel="stylesheet" href="static/css/style.css">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sem Bakkum">
+        <meta name="description" content="">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style/style.css">
     </head>
     
     <body>
         
-        <header>
-            <div class="overlay"><h1>Feature detection</h1></div>
-        </header>
-        
         <main>
-        
-            <section>
-                
-                <h2>HTML 5 features</h2>
-                
-                <article>
-                    
-                    <section>
-                
-                        <h3>Meter tag</h3>
-
-                        <meter value="55.93" min="0" max="120.47" title="GB">
-                          <div class="meter-gauge">
-                            <span style="width: 46.42%;">Disk Usage - 55.93GB out of 120GB</span>
-                          </div>
-                        </meter>
-
-                        <h4>Browser support</h4>
-
-                        <img class="support" src="static/images/metersupport.png">
-
-                    </section>
-                
-                    <section>
-                    
-                        <h3>Srcset</h3>
-
-                        <img class="support" src="static/images/header-small.jpg" srcset="static/images/header-small.jpg 480w, static/images/header-medium.jpg 960w, static/images/header-large.jpg 1920w" alt="House of Cards">
-
-                        <h4>Browser support</h4>
-
-                        <img class="support" src="static/images/srcsetsupport.png">
-                        
-                    </section>
-                
-                </article>
-                
-            </section>
             
-            <section>
-            
-                <h2>CSS 3 features</h2>
-                
-                <article>
-                
-                    <section>
-                    
-                        <h3>Viewport</h3>
-                        
-                        <img class="view" src="static/images/css3.jpg">
-                        
-                        <h4>Viewport support</h4>
-                        
-                        <img class="support" src="static/images/viewportsupport.png">
-                        
-                    </section> 
-                    
-                    <section>
-                    
-                        <h3>Direction</h3>
-                        
-                        <p><span dir="rtl">reverse direction</span></p>
-                        
-                        <h4>Direction support</h4>
-                        
-                        <img class="support" src="static/images/directionsupport.png"
-                        
-                    </section>
-                
-                </article>
-            
-            </section>
-                
-            <section> 
-            
-                <h2>ES6 features</h2>
-                
-                <article>
-                    
-                    <section>
-                    
-                        <h3>Geolocation</h3>
-                        
-                        <input id="crapy" type="text" name="Location" value="Uw locatie"><br>
-
-                        <p id="demo"></p>
-                        
-                        <code>
-                            if (navigator.geolocation) {
-                                document.getElementById('crapy').classList.add('fuckOff');
-                                navigator.geolocation.getCurrentPosition(showPosition);
-                            }
-
-                            function showPosition(position) {
-                                x.innerHTML = "Latitude: " + position.coords.latitude + 
-                                "<br>Longitude: " + position.coords.longitude; 
-                            }
-                        </code>
-                        
-                        <h4>Geolocation support</h4>
-                        
-                        <img class="support" src="static/images/geosupport.png">
-                    
-                    </section>
-                    
-                    <section>
-                    
-                        <h3>Service worker</h3>
-                        
-                        <p id="sw"></p>
-                        
-                        <code>
-                        
-                             if ('serviceWorker' in navigator) {  
-                                navigator.serviceWorker.register('/service-worker.js')  
-                                .then(initialiseState);  
-                              } else {  
-                                y.innerHTML = "Service workers aren\'t supported in this browser." ;  
-                              }
-                        
-                        </code>
-                        
-                        <h4>Service worker support</h4>
-                        
-                        <img class="support" src="static/images/swsupport.png">
-                        
-                    </section>
-                    
-                </article>
-                
-            </section>
-                
-            <section>
-            
-                <article> 
-                
-                    <h2>Core functionality Funda app</h2>
-                    
-                    <p>
-                    
-                        De core functionaliteit van de Funda app is het gebruik van geolocatie. Zonder deze functionaliteit is de app eigenlijk niet te gebruiken en ook niet nuttig. Door dat de gebruiker niets hoeft in te voeren en de gps van zijn/haar device gebruikt wordt is er geen mogelijkheid om het zelf in te voeren. Mocht het apparaat geen gps ondersteunen dan zou er als fallback een input field moeten komen waar de gebruiker de locatie kan invoeren. In de huidige code wordt er al gekeken of het apparaat geolocatie ondersteunt als dat zo is wordt de huidige code uitgevoerd. Als fallback kan er een else statement aan toegevoegd worden die de input box displayed. Of nog beter de input box wordt standaard gedisplayed en als geolocatie wordt ondersteund dan wordt de input box weg gehaald. 
-                    
-                    </p>
-                
-                </article>
-                
-            </section>
-        
         </main>
    
     </body>
-
-    <script src="static/js/script.js"></script>
 </html>

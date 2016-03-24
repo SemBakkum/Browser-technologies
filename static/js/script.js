@@ -1,23 +1,38 @@
 (function () {
-    var x = document.getElementById("demo");
-    var y = document.getElementById("sw");
-
-        if (navigator.geolocation) {
-            document.getElementById('crapy').classList.add('fuckOff');;
-            navigator.geolocation.getCurrentPosition(showPosition);
+    'use strict';
+    
+    var audios = document.querySelectorAll('audio');
+    var sections = document.querySelectorAll('section');
+    
+    function play(event) {
+        
+        console.log(this);
+        
+        var audio = this.parentNode.querySelector('audio');
+        
+        if(audio.paused){
+            
+            audio.play();
+            
+        } else {
+            
+            audio.pause();
+            
         }
+        
+    };
     
-        function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude; 
-        }	
+    for (var i = 0; i < sections.length; i += 1) {
+        var btn = document.createElement('button');
+        btn.innerHTML = sections[i].querySelector('h2').innerHTML;
+        sections[i].appendChild(btn);
+        
+        
+        
+        btn.addEventListener('click', play, false);
+        audios[i].removeAttribute('controls');
+    }
     
-    if ('serviceWorker' in navigator) {  
-    navigator.serviceWorker.register('/service-worker.js')  
-    .then(initialiseState);  
-  } else {  
-    y.innerHTML = "Service workers aren\'t supported in this browser." ;  
-  }
+    document.body.classList.add('enhanced-with-js')
     
 }());
-
