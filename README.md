@@ -133,13 +133,63 @@ Bij het opzetten van de HTML heb ik nagedacht over de structuur en hoe deze ook 
   </main>
 ```
 
-In de code is al een soort van fallback te zien. Binnen de audio tag leeft een <a> tag. Mocht de audio tag niet ondersteund worden (zoals in IE 8) dan krijgt de gebruiker als nog een link te zien. Zodra er op deze link geklikt wordt kan het geluidje via een externe player afgespeeld worden. Dit heb ik gestest in IE 8. Windows media player wordt dan geopent en speelt het geluidje af. 
+In de code is al een soort van fallback te zien. Binnen de audio tag leeft een a tag. Mocht de audio tag niet ondersteund worden (zoals in IE 8) dan krijgt de gebruiker als nog een link te zien. Zodra er op deze link geklikt wordt kan het geluidje via een externe player afgespeeld worden. Dit heb ik gestest in IE 8, windows media player wordt dan geopend en speelt het geluidje af. 
 
-Wordt de audio tag wel ondersteund dan krijgt de gebruiker de standaard controls te zien en kan hij/zij deze afspelen. Doordat er in de audio tag het attribuut loop wordt meegegeven zal het geluidje zich herhaald afspelen. Zo is de gebruiker instaat om een eigen beat te maken met de beschikbare geluiden. 
+Wordt de audio tag wel ondersteund dan krijgt de gebruiker de standaard controls te zien en kan hij/zij deze afspelen. Doordat in de audio tag het attribuut loop wordt meegegeven zal het geluidje zich herhaald afspelen. Zo is de gebruiker instaat om een eigen beat te maken met de beschikbare geluiden. In weze is de beatbox bij deze al gerealiseerd, maar nog niet enhanced voor een betere/fijnere gebruikers ervaring. 
 
 ##Enhancement met JS
 
+###Buttons
 
+Nu zijn de standaard controls natuurlijk niet echt mooi, maar het de basis is er en nu kan ik deze enhancen met JavaScript. 
+
+```javascript
+for (var i = 0; i < sections.length; i += 1) {
+        var btn = document.createElement('button');
+        btn.innerHTML = sections[i].querySelector('h2').innerHTML;
+        sections[i].appendChild(btn);
+        btn.addEventListener(handler, play, false);
+        audios[i].removeAttribute('controls');
+    }
+  ```
+
+Met JavaScript ben ik gaan kijken hoeveel sections er zijn. Op basis van dat aantal heb ik via JavaScript buttons laten maken die als tekst de h2 tekst uit de HTML mee krijgen. De buttons maak ik omdat de audio tag minimaal te stylen is met CSS. 
+
+De buttons worden vervolgens in de section geplaatst waar ze thuis horen en het attribuut controls wordt verwijderd van de audio tag binnen die sectie. Dit doe ik zodat de player niet meer zichtbaar is, omdat we het geluid nu gaan afspelen via de button. 
+
+```javascript
+function play(event) {
+        
+        console.log(this);
+        
+        var audio = this.parentNode.querySelector('audio');
+        
+        if(audio.paused){
+            
+            audio.play();
+            audio.currentTime = 0;
+            
+        } else {
+            
+            audio.pause();
+            
+        }
+        
+    };
+    ```
+Om dit voor elkaar te krijgen wordt er gekeken op welke button er geklikt wordt. Binnen de scetion waar de button in zit wordt vervolgens de audio tag gezocht en afgespeeld. audio.currentTime = 0; geeft aan dat het afspelen van het geluid bij 0 moet beginnen elke keer als de gebruiker op de button klikt. 
+
+###Keypress
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
