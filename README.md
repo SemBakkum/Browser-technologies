@@ -151,7 +151,7 @@ for (var i = 0; i < sections.length; i += 1) {
         btn.addEventListener(handler, play, false);
         audios[i].removeAttribute('controls');
     }
-  ```
+```
 
 Met JavaScript ben ik gaan kijken hoeveel sections er zijn. Op basis van dat aantal heb ik via JavaScript buttons laten maken die als tekst de h2 tekst uit de HTML mee krijgen. De buttons maak ik omdat de audio tag minimaal te stylen is met CSS. 
 
@@ -176,7 +176,7 @@ function play(event) {
         }
         
     };
-    ```
+```
 Om dit voor elkaar te krijgen wordt er gekeken op welke button er geklikt wordt. Binnen de scetion waar de button in zit wordt vervolgens de audio tag gezocht en afgespeeld. audio.currentTime = 0; geeft aan dat het afspelen van het geluid bij 0 moet beginnen elke keer als de gebruiker op de button klikt. 
 
 ###Keypress
