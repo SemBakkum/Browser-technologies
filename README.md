@@ -177,9 +177,71 @@ function play(event) {
         
     };
 ```
-Om dit voor elkaar te krijgen wordt er gekeken op welke button er geklikt wordt. Binnen de scetion waar de button in zit wordt vervolgens de audio tag gezocht en afgespeeld. audio.currentTime = 0; geeft aan dat het afspelen van het geluid bij 0 moet beginnen elke keer als de gebruiker op de button klikt. 
+Om dit voor elkaar te krijgen wordt er gekeken op welke button er geklikt wordt. Binnen de section waar de button in zit wordt vervolgens de audio tag gezocht en afgespeeld. audio.currentTime = 0; geeft aan dat het afspelen van het geluid bij 0 moet beginnen elke keer als de gebruiker op de button klikt. Om meer interactie toe te voegen en de gebruikers ervaring verder te enhancen heb ik er voor gezorgd dat de geluiden ook d.m.v. keypress kunnen worden afgespeeld. Dit kan door de toetsen a, s, d, f, g, h, j, k in te drukken. 
 
-###Keypress
+```javascript
+  var hardKick = new Audio('sounds/hard-kick.mp3');
+ 
+  var hardKickPlay = function() {
+        hardKick.play();
+        hardKick.currentTime = 0;
+    };
+  
+  window.onkeydown = function (e) {
+        
+      var down = event.keyCode;
+        
+        switch (down) {
+
+          case(65): hardKickPlay();
+          break;
+        }
+  };
+```
+
+Om de buttons die via JavaScript zijn aangemaakt een eigenstyling te geven voeg ik de volgende class toe via JavaScript.
+
+```javascript 
+document.body.classList.add('enhanced-with-js')
+```
+
+Hier mee zeg ik dat de body vanuit CSS de class enhanced-with-js toegewezen krijgt.
+
+###CSS
+
+De body heeft nu de class enhanced-with-js. Door deze class telkens te gebruiken kan ik de enhancede versie stylen. 
+
+Het doel van de buttons was dat deze wel gestyled konden worden met CSS en de audio tag bijna niet. Dus als volgt heb ik deze buttons gestyled met CSS via de class enhanced-with-js. 
+
+```
+.enhanced-with-js button {
+    width: 100px;
+    height: 100px;
+    background: #676caf;
+    color: azure;
+    font-size: 16px;
+    font-size: 1em;
+    margin: 8px;
+    border-radius: 6px;
+}
+```
+###Touch devices
+
+De beatbox heb ik ook getest op touch devices. Hier kwam de touch ervring op de buttons niet vrij natuurlijk over. 
+Er zat een delay tussen de touch en het daadwerkelijk afspelen van het geluid. Dit komt doordat bijna alle browsers een delay van 300ms op een touch event hebben ziiten. Dit doen de browser om te controleren of de gebruiker bijvoorbeeld niet een dubbel tap doet. Om dit natuurlijk te laten aanvoelen moest ik deze delay er af halen zodat het geluid direct afgespeeld zou worden. Dit heb ik d.m.v. de volgende code gedaan. 
+
+```javascript
+if ('ontouchstart' in document.documentElement) {
+            handler = 'touchstart';
+        } else {
+            handler = 'click';
+        }
+```
+
+Er wordt gekeken of het device ontouchstart ondersteund, als dat zo is wordt de handler touchstart en geen click meer. Zo is de reactie snelheid van de button 0 en is de delay van 300ms eraf. 
+
+
+
 
     
     
