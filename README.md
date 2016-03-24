@@ -114,6 +114,9 @@ Met dit in het achterhoofd ben ik audio samples gaan uitzoeken voor mijn beatbox
 ####Can I use mp3 support
 [Can I use mp3](http://caniuse.com/#feat=mp3 "MP3")
 
+###Audio tag attributes
+[whatwg.org audio tag](https://html.spec.whatwg.org/multipage/embedded-content.html#the-audio-element "Audio attributues")
+
 ##HTML
 
 Bij het opzetten van de HTML heb ik nagedacht over de structuur en hoe deze ook met de tab nog steeds goed te gebruiken is. 
