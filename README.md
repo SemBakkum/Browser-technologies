@@ -95,14 +95,14 @@ Voor deze case ben ik aller eerst de audio tag gaan onderzoeken. Het blijkt dat 
 
 De audio tag heeft meerdere attributen die er toepasbaar op zijn, zoals: 
 
-*src — Address of the resource
-*crossorigin — How the element handles crossorigin requests
-*preload — Hints how much buffering the media resource will likely need
-*autoplay — Hint that the media resource can be started automatically when the page is loaded
-*mediagroup — Groups media elements together with an implicit MediaController
-*loop — Whether to loop the media resource
-*muted — Whether to mute the media resource by default
-*controls — Show user agent controls
+1.src — Address of the resource
+2.crossorigin — How the element handles crossorigin requests
+3.preload — Hints how much buffering the media resource will likely need
+4.autoplay — Hint that the media resource can be started automatically when the page is loaded
+5.mediagroup — Groups media elements together with an implicit MediaController
+6.loop — Whether to loop the media resource
+7.muted — Whether to mute the media resource by default
+8.controls — Show user agent controls
 
 Deze attributen kunnen elk ook hun eigen keywords hebben. Het preload attribuut kan bijvoorbeeld 'none' en 'auto' als keyword hebben. None houdt in dat de src van de audio tag niet gepreload hoeft te worden. Auto geeft aan dat de src gepreload kan worden, mits de browser dit ondersteund. Alle browsers ondersteunen daarnaast ook niet elk audio format. Als voorbeeld wordt de audio extensie .wav door zo goed als alle IE browsers niet ondersteund. MP3 daarin tegen weer wel. 
 
