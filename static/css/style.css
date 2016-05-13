@@ -1,7 +1,3 @@
-body {
-    
-}
-
 html {font-size: 1em;}
 
 body {
@@ -38,7 +34,7 @@ small, .font_small {font-size: 0.618em;}
 header{
     background: #19c589;
     display: block;
-    width: 98.6%;
+    width: 100%;
     height: 100px;
     padding: 10px;
     text-align: center;
@@ -72,6 +68,153 @@ a {
 }
 
 a:hover {
-    color: #19c;
+    color: #0bac74;
 }
+
+.enhanced-with-js h1 {
+    margin-top: 20px;
+}
+
+.enhanced-with-js h2 {
+    display: none;
+}
+
+.enhanced-with-js div {
+    margin: auto;
+}
+
+.enhanced-with-js #panel {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 90%;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 3rem;
+    background: #aeaeae;
+    border-radius: .2rem;
+    padding: .5rem;
+}
+
+.enhanced-with-js h1 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.enhanced-with-js button {
+    width: 100%;
+    height: 120px;
+    background: #19c589;
+    color: azure;
+    font-size: 16px;
+    font-size: 1.5em;
+}
+
+.enhanced-with-js .active {
+    border-style: inset;
+    background: #0bac74;
+}
+
+.enhanced-with-js .section {
+    margin-left: 0;
+    margin-right: 0;
+    margin: 1rem;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+}
+
+.enhanced-with-js section:last-of-type {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: calc(50% - 2rem);
+}
+
+.enhanced-with-js section:nth-of-type(9) {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: calc(50% - 2rem);
+}
+
+#controls {
+    display: none;
+}
+
+
+.enhanced-with-js .display {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-top: 3rem;
+    background: #aeaeae;
+    border-radius: .2rem;
+    padding: .5rem !important;
+}
+
+.enhanced-with-js .controlTitle {
+    display: block;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
